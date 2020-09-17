@@ -106,7 +106,7 @@
     function disp_warn(sno) {
 
 
-        let del = `{{url_for('blog.delete', sno=${sno}) }}`;
+        let del = `{{url_for('blog.delete', sno='') }}${sno}`;
 
         let deletepost = confirm("Your post will be permanently deleted.");
 
