@@ -38,16 +38,16 @@
     &nbsp;
     <nav id="navbar">
         <ul>
-            <li class="item" id="prime"><a href="/">CODERG</a></li>
-            <li class="item"><a href="/projects">Projects</a></li>
-            <li class="item" id="blog"><a href="/blog">Blogs</a></li>
-            <li class="item"><a href="/about">About</a></li>
+            <li class="item" id="prime"><a href="{{ url_for('main.index') }}">CODERG</a></li>
+            <li class="item"><a href="{{ url_for('main.display_projects') }}">Projects</a></li>
+            <li class="item" id="blog"><a href="{{ url_for('blog.index') }}">Blogs</a></li>
+            <li class="item"><a href="{{ url_for('main.about') }}">About</a></li>
             {% if 'user' in session %}
             <li><button style="display: contents;"><a class="" id="entercod" style="border-color: green;"
-                        href="/dashboard">{{session['user'][:10]}}</a></button></li>
+                        href="{{ url_for('main.dashboard') }}">{{session['user'][:10]}}</a></button></li>
             {% else %}
             <li><button style="display: contents; border: 1.5px solid rgb(122, 168, 231);"><a class="" id="entercod"
-                        href="/dashboard">Log In</a></button></li>
+                        href="{{ url_for('main.dashboard') }}">Log In</a></button></li>
             {% endif %}
         </ul>
 
