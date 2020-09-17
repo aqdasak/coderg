@@ -161,8 +161,8 @@
                     <td role="cell">{{ counter[0] }}</td>
                     <td role="cell">{{post.title}}</td>
                     <td role="cell">{{post.author.fullname}}</td>
-                    <td role="cell"><a href="/edit/{{post.sno}}" style="text-decoration: none;"><button
-                                class="admin">Edit</button></a></td>
+                    <td role="cell"><a href="{% url_for('blog.edit', sno=post.sno %} "
+                            style="text-decoration: none;"><button class="admin">Edit</button></a></td>
                 </tr>
 
                 {% if counter.append(counter.pop()+1) %}{% endif %}
