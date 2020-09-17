@@ -65,7 +65,7 @@
     <footer>
 
         <div class="contact">
-            <p><a id="cont" href="/contact">Contact Us</a></p>
+            <p><a id="cont" href="{{ url_for('main.contact') }}">Contact Us</a></p>
         </div>
 
         <div class="copyright">Copyright &copy CODERG.2020 | <span id="time"> </span></div>
@@ -76,7 +76,7 @@
             </span> </div>
 
         <div id="des-man">
-            <p class="comp">| Designed and Managed by: <a href="/about"
+            <p class="comp">| Designed and Managed by: <a href="{{ url_for('main.about') }}"
                     style="text-decoration: none; color: rgb(247, 217, 85); ">codergdevelopers. </a>|</p>
         </div>
     </footer>

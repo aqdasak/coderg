@@ -32,8 +32,8 @@
     <h1>Basic actions</h1>
 
     <button onclick="disp_warn({{ post.sno }})" class="admin">Delete post</button>
-    <a href="/dashboard" style="text-decoration: none;"><button class="admin">Dashboard home</button></a>
-    <a href="/logout" style="text-decoration: none;"><button class="admin">Logout</button></a>
+    <a href="{{ url_for('main.dashboard') }}" style="text-decoration: none;"><button class="admin">Dashboard home</button></a>
+    <a href="{{ url_for('auth.logout') }}" style="text-decoration: none;"><button class="admin">Logout</button></a>
 
 {#
     <!-- Flash message -->
