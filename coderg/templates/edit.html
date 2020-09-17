@@ -55,7 +55,7 @@
     <hr style="margin-bottom: 1rem;">
     <div class=" post-box">
 
-        <form name="sentMessage" id="" action="{{ url_for('blog.edit'.sno=sno) }}" method="post" novalidate>
+        <form name="sentMessage" id="" action="{{ url_for('blog.edit', sno=sno) }}" method="post" novalidate>
             <label for="name">Title</label>
             <div>
                 <input type="text" class="" placeholder="Title" id="" name="title" value="{{post.title}}" required
